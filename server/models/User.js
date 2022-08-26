@@ -24,9 +24,9 @@ const userSchema = new Schema (
       required: true,
     },
     // set savedBooks, savedTV and savedMovies to be an array of data that adheres to the schemas
-    savedBooks: [bookSchema],
-    savedTV: [tvSchema],
-    savedMovies: [movieSchema],
+    // savedBooks: [bookSchema],
+    // savedTV: [tvSchema],
+    // savedMovies: [movieSchema],
   },
   {
     toJSON: {
