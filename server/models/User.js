@@ -24,7 +24,7 @@ const userSchema = new Schema (
       required: true,
     },
     // set savedBooks, savedTV and savedMovies to be an array of data that adheres to the schemas
-    // savedBooks: [bookSchema],
+    savedBooks: [bookSchema],
     // savedTV: [tvSchema],
     // savedMovies: [movieSchema],
   },
@@ -55,13 +55,13 @@ userSchema.virtual('bookCount').get(function () {
   return this.savedBooks.length;
 });
 
-userSchema.virtual('tvCount').get(function () {
-  return this.savedTV.length;
-});
+// userSchema.virtual('tvCount').get(function () {
+//   return this.savedTV.length;
+// });
 
-userSchema.virtual('movieCount').get(function () {
-  return this.savedMovies.length;
-});
+// userSchema.virtual('movieCount').get(function () {
+//   return this.savedMovies.length;
+// });
 
 const User = model('User', userSchema);
 
